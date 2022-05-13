@@ -1,0 +1,87 @@
+.form {
+  width: 60%;
+  margin-left: 30%;
+  text-align: center;
+  background-color: #232a34;
+  color: white;
+  font-size: 1.3rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 850px;
+}
+
+.form .button {
+  border: none;
+  border-radius: 2rem;
+  width: 90%;
+  margin: 0.5rem auto;
+  background-color: #01bf71;
+  line-height: 2.5em;
+}
+
+.form .button input {
+  width: 100%;
+}
+
+.form .field {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .field > input {
+  width: 90%;
+  line-height: 2.5em;
+  padding: 0.3rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.form .field > label {
+  width: 90%;
+  text-align: left;
+}
+
+.form .button > input {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.form .button > input:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form .messaggioErrore {
+  color: red;
+  margin-top: 0.2em;
+}
+
+.form a {
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 90%;
+    margin: 2rem auto;
+  }
+}
+/*# sourceMappingURL=formStyle.css.map */

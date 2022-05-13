@@ -1,0 +1,277 @@
+:root {
+  --verdeChiaro: #01bf71;
+  --verdeScuro: #007c4f;
+  --bg: #232a34;
+  --border: 1rem;
+  --text: white;
+  --bgimg: linear-gradient(85deg, #61c7ef, #4833fb);
+}
+
+.areaPersonale {
+  max-width: 1024px;
+  margin: 2rem auto;
+  color: var(--text);
+  border: 0.2rem solid var(--verdeChiaro);
+  border-radius: 2rem;
+  padding: 3rem 1rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  background-color: var(--bg);
+}
+
+.areaPersonale form {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 20rem;
+  padding: 0;
+}
+
+.areaPersonale form .field {
+  width: 100%;
+}
+
+.areaPersonale form .field label {
+  margin: 0.5rem 0;
+}
+
+.areaPersonale form input {
+  padding: 0.3rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.areaPersonale form .button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 2rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.areaPersonale button {
+  width: 8rem;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: var(--border);
+  background-color: var(--verdeChiaro);
+  margin: 0.2rem 0;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.areaPersonale input[type="text"] {
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+  max-width: 20rem;
+  width: 80%;
+}
+
+.areaPersonale .navPersonale {
+  border: 0.2rem solid var(--verdeChiaro);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: var(--bg);
+  border-radius: var(--border);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-right: 1rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.areaPersonale .navPersonale button {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.areaPersonale .datiPersonali {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.areaPersonale .datiPersonali button {
+  margin: auto;
+}
+
+.areaPersonale .datiPersonali .field {
+  margin: 0.5rem auto;
+}
+
+.areaPersonale .dato {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.3rem 0;
+}
+
+.areaPersonale .dato .dateName {
+  margin-right: 0.5rem;
+  width: 6rem;
+}
+
+.areaPersonale .dato .dateName::after {
+  content: ":";
+}
+
+.areaPersonale .dato .dateValue {
+  width: 30%;
+  height: 1.6rem;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.areaPersonale .listaPreferiti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.areaPersonale .listaPreferiti .localePreferito a {
+  color: white;
+  font-size: 2rem;
+}
+
+.areaPersonale .listaPreferiti .localePreferito img {
+  width: 2.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.areaPersonale .localePreferito,
+.areaPersonale .localeSuggerito {
+  width: 80%;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  max-width: 20rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--verdeScuro);
+  margin: 0.3rem 0;
+  padding: 0 0.6rem;
+  border-radius: var(--border);
+}
+
+.areaPersonale .localePreferito img,
+.areaPersonale .localeSuggerito img {
+  width: 2rem;
+}
+
+.areaPersonale .instagram,
+.areaPersonale .suggerisci {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.areaPersonale .instagram input,
+.areaPersonale .suggerisci input {
+  border: 0.2rem solid var(--verdeScuro);
+  padding: 0.3rem 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .areaPersonale {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .areaPersonale .navPersonale {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+  .areaPersonale .datiPersonali,
+  .areaPersonale .listaPreferiti,
+  .areaPersonale .instagram,
+  .areaPersonale .suggerisci {
+    padding: 0 0 0 2rem;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .areaPersonale .navPersonale {
+    width: 80%;
+    overflow: auto;
+    -webkit-box-pack: initial;
+    -ms-flex-pack: initial;
+    justify-content: initial;
+    margin: auto;
+  }
+  .areaPersonale .navPersonale button {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,223 @@
+.hidden {
+  display: none;
+}
+
+* {
+  text-decoration: none;
+}
+
+#bestLocals {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: white;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background-color: #232a34;
+}
+
+#bestLocals a {
+  color: white;
+}
+
+#bestLocals h1 {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  color: #01bf71;
+}
+
+#bestLocals .cardHome {
+  margin: 1rem 0;
+  min-width: 300px;
+  width: 24vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #1d1f21;
+  border-radius: 2rem;
+  height: 35rem;
+  overflow: hidden;
+  color: white;
+  border: 0.2rem solid var(--verdeChiaro);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#bestLocals .cardHome .immagineHome {
+  position: relative;
+  height: 50%;
+}
+
+#bestLocals .cardHome .immagineHome p {
+  position: absolute;
+  top: 2rem;
+  background: #01bf71;
+  padding: 0.5rem;
+  border-radius: 0 1rem 1rem 0;
+}
+
+#bestLocals .cardHome .immagineHome img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#bestLocals .cardHome .infoHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#bestLocals .cardHome .infoHome img,
+#bestLocals .cardHome .infoHome input[type="image"] {
+  width: 2rem;
+}
+
+#bestLocals .cardHome .infoHome p {
+  margin: 0;
+}
+
+#bestLocals .cardHome .infoHome .contenitoreNome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1.6rem;
+}
+
+#bestLocals .cardHome .infoHome .contenitoreNome a {
+  color: #fc0;
+  font-size: 0.9em;
+}
+
+#bestLocals .cardHome .infoHome .contenitoreNome a:hover {
+  text-decoration: underline;
+}
+
+#bestLocals .cardHome .infoHome .contenitoreNome input {
+  margin-left: 0.5rem;
+}
+
+#bestLocals .cardHome .infoHome .telefonoHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+#bestLocals .cardHome .infoHome .ratingHome {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#bestLocals .cardHome .infoHome .ratingHome p {
+  width: 100%;
+  text-align: center;
+}
+
+#bestLocals .cardHome .infoHome .ratingHome div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#bestLocals .cardHome .resultHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-bottom: 0.3rem;
+}
+
+#bestLocals .cardHome .resultHome .linksHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#bestLocals .cardHome .resultHome a {
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contenitorePager {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.contenitorePager button {
+  margin: 1rem;
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

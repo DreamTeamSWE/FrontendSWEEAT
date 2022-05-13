@@ -1,0 +1,44 @@
+.preview-values{
+  color: white;
+
+}
+
+.cucina{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.msl-wrp{
+  width: 100% !important;
+  background-color: white;
+}
+
+.zona{
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+}
+
+.zona > select{
+  width: 100%;
+  height: 3em;
+  background-color: white;
+  padding: 0;
+  border: none;
+  border-radius: 2em;
+  padding: 1%;
+}
+
+.zona > label, .cucina > div > label{
+  line-height: 3em;
+}
+
+@media screen and (max-width: 911px) {
+
+  .cucina, .zona{
+    width: 48%;
+    margin: 0 1% 1em;
+    float: left;
+  }
+
+}

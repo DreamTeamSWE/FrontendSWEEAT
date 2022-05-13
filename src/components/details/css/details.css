@@ -1,0 +1,158 @@
+body {
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.dettagliLocale {
+  margin: 2rem auto;
+  color: black;
+  width: 90%;
+  padding: 1rem 3%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  border-radius: 2rem;
+  background-color: #1d1f21;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: white;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dettagliLocale .post_link a {
+  color: white;
+  margin: 0 1rem;
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dettagliLocale .localePost {
+  font-size: 3rem;
+}
+
+.dettagliLocale .telefonoPost {
+  font-size: 1.5rem;
+}
+
+.dettagliLocale .valutazionePost {
+  background-color: var(--verdeChiaro);
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.postcard {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #1d1f21;
+  border-radius: 2rem;
+  height: 30rem;
+  overflow: hidden;
+  color: white;
+  border: 0.2rem solid var(--verdeChiaro);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.postcard .post {
+  text-align: center;
+}
+
+.postcard .image {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.postcard .postinfo {
+  width: 95%;
+  margin: 0 auto;
+  height: 50%;
+  overflow: auto;
+}
+
+.postcard .hashtag {
+  margin: 0.2rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.5em;
+  display: unset;
+  background-color: rgba(255, 227, 117, 0.3);
+  color: white;
+  line-height: 2em;
+}
+
+.postcard .hashtag > span {
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.postcard .hashDisplay {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .dettagliLocale .localePost {
+    font-size: 2rem;
+  }
+  .dettagliLocale .telefonoPost {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dettagliLocale .localePost {
+    font-size: 1.6rem;
+  }
+  .dettagliLocale .telefonoPost {
+    font-size: 1.4rem;
+  }
+}

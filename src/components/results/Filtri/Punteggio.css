@@ -1,0 +1,95 @@
+.punteggio{
+  width: 90%;
+  margin-top: 1em;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.punteggio > p{
+  color: white;
+}
+
+.testo{
+  color: white;
+  float: left;
+  width: 38%;
+  margin: 1em 2% 1em 0;
+}
+
+.slider{
+  width: 60%;
+  float: left;
+}
+
+.slider > input{
+  width: 100%;
+  margin-top: 1.2em;
+}
+
+.mobileSlider, .mobileTesto{
+  display: none;
+}
+
+
+@media screen and (max-width: 911px) {
+  .punteggio{
+    width: 98%;
+    margin: 0 1%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  #fotoSlider, #testoSlider, #emoticonSlider{
+    display: none;
+  }
+
+  .punteggio > p{
+    width: 100%;
+    margin-bottom: .6em;
+  }
+
+  .mobileSlider{
+    color: white;
+    display: block;
+    float: left;
+    width: 32.6%;
+  }
+
+  .mobileTestoSlider{
+    margin: 0 1%;
+  }
+
+  .mobileTesto{
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .mobileSlider > select{
+    width: 100%;
+    float: left;
+    height: 2.5em;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2em;
+    padding: 1%;
+
+    line-height: 1em;
+    font-size: 1em;
+  }
+
+  .select{
+    color: #929292;
+  }
+
+  .mobileSlider > select:after{
+    border-radius: 2em;
+  }
+}
