@@ -9,7 +9,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 configure({adapter: new Adapter()});
 
-describe('Check render controllo link mobile', () => {
+describe('Check render controllo immagine', () => {
   beforeEach(() =>{
   render(
       <ControlloImmagine />
@@ -22,7 +22,7 @@ describe('Check render controllo link mobile', () => {
 
 });
 
-describe('Check render controllo link mobile', () => {
+describe('Check render controllo tags', () => {
   beforeEach(() =>{
   render(
       <ControlloTags />
