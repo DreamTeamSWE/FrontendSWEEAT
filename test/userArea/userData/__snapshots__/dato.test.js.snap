@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check Dato 1`] = `ShallowWrapper {}`;
+
+exports[`Check User Data 1`] = `ShallowWrapper {}`;
