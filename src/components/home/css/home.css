@@ -51,7 +51,9 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
+.rsis-container {
+  border-radius: 2rem;
+}
 #bestLocals .cardHome .immagineHome {
   position: relative;
   height: 50%;
@@ -184,7 +186,9 @@
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
-
+.pager_button.active {
+  background-color: white;
+}
 #bestLocals .cardHome .resultHome a {
   border-radius: 50px;
   background: #01bf71;

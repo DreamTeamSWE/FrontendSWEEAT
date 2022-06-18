@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { suggest } from "../../../services/services";
+
+import SuggerisciAccountVM from "./SuggerisciAccountVM";
 
 function Suggerisci() {
-  const suggerisciClick = async () => {
-    const message = await suggest(accountId);
-    setStato(message);
-  };
-  const [stato, setStato] = useState("");
-  const [accountId, setAccountId] = useState("");
+  const { stato, accountId, suggerisciClick, inputHandler } =
+    SuggerisciAccountVM();
+
   return (
     <div className="suggerisci">
       <h1>Suggerisci account</h1>
-      <input type="text" onChange={(e) => setAccountId(e.target.value)} />
-      <button onClick={() => suggerisciClick()}>Suggerisci locale</button>
+      <input type="text" value={accountId} onChange={inputHandler} />
+      <button onClick={suggerisciClick}>Suggerisci account</button>
       {stato && <h4>{stato}</h4>}
     </div>
   );

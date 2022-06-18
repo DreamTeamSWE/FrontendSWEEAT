@@ -11,20 +11,19 @@ import emoji from "./../../images/happy.png";
 import image from "./../../images/image-gallery.png";
 import text from "./../../images/note.png";
 import StarIcon from "@mui/icons-material/Star";
-
 import HomeCardsVM from "./HomeCardsVM";
 import { useStore } from "../../Context";
 import { observer } from "mobx-react";
-
 function HomeCards() {
-  const { topHome, isLike, setLike, setDislike, fetchtopHome } = HomeCardsVM(
-    useStore()
-  );
+  const { isAuth, topHome, isLike, pages, heartToggle, handlePages } =
+    HomeCardsVM(useStore());
+
   return (
     <div id="bestLocals">
       <h1>I migliori locali di Sweeat</h1>
       {topHome &&
-        topHome.map((locale) => (
+        topHome.length &&
+        topHome.map((locale, index) => (
           <div className="cardHome" key={locale.id}>
             <div className="immagineHome">
               <img
@@ -62,13 +61,16 @@ function HomeCards() {
                   {/*to="/Post" className={locale.nome_ristorante == "null" ? 'hidden' : 'nome_locale_home'}>*/}
                   {locale.name}
                 </Link>
-                <input
-                  type="image"
-                  id="img"
-                  className="heartHome"
-                  src={emptyheart}
-                  onClick={isLike ? setDislike : setLike}
-                />
+                {isAuth && (
+                  <input
+                    type="image"
+                    id="img"
+                    className="heartHome"
+                    src={isLike[index] ? heart : emptyheart}
+                    value={index}
+                    onClick={heartToggle}
+                  />
+                )}
               </div>
               <CheckPhone phone={locale.phone === "" ? "" : locale.phone} />
               <div className="ratingHome">
@@ -146,11 +148,25 @@ function HomeCards() {
         ))}
       {!topHome && <h2>Non ci sono locali?!?!?!</h2>}
       <div className="contenitorePager">
-        <button onClick={() => fetchtopHome(0)}>1</button>
-        <button onClick={() => fetchtopHome(1)}>2</button>
-        <button onClick={() => fetchtopHome(2)}>3</button>
-        <button onClick={() => fetchtopHome(3)}>4</button>
-        <button onClick={() => fetchtopHome(4)}>5</button>
+        {topHome &&
+          new Array(pages).fill(0).map((_, index) => (
+            index == 0 ?
+              <button
+                className="pager_button active"
+                key={"pageButton" + index}
+                value={index + 1}
+                onClick={handlePages}
+              >
+                {index + 1}
+              </button> : <button
+                className="pager_button"
+                key={"pageButton" + index}
+                value={index + 1}
+                onClick={handlePages}
+              >
+                {index + 1}
+              </button>
+          ))}
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Dato(props) {
     return <div className="dato">
         <label className="dateName" >{props.dateName}</label>

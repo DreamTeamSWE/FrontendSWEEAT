@@ -42,7 +42,7 @@ function Testo() {
 
 function Foto() {
   const [volume, setVolume] = useState(0.3);
-
+  console.log(volume);
   return (
     <>
       <div id="fotoSlider">

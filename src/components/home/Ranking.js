@@ -1,13 +1,13 @@
 import React from "react";
 import "./css/home.css";
-import SearchBar from "../searchBar/SearchBar";
-import Ranking from "./Ranking";
+import HomeCards from "./HomeCards";
+import Filters from "./Filters";
 
 function Home() {
   return (
     <>
-      <SearchBar />
-      <Ranking />
+      <Filters />
+      <HomeCards />
     </>
   );
 }

@@ -1,4 +1,4 @@
-.punteggio{
+.punteggio {
   width: 90%;
   margin-top: 1em;
   margin-left: 5%;
@@ -9,70 +9,71 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.punteggio > p{
+.punteggio > p {
   color: white;
 }
 
-.testo{
+.testo {
   color: white;
   float: left;
   width: 38%;
   margin: 1em 2% 1em 0;
 }
 
-.slider{
+.slider {
   width: 60%;
   float: left;
 }
 
-.slider > input{
+.slider > input {
   width: 100%;
   margin-top: 1.2em;
 }
 
-.mobileSlider, .mobileTesto{
+.mobileSlider,
+.mobileTesto {
   display: none;
 }
 
-
-@media screen and (max-width: 911px) {
-  .punteggio{
+@media screen and (max-width: 768px) {
+  .punteggio {
     width: 98%;
     margin: 0 1%;
     display: inline-block;
-    text-align: left;
   }
 
-  #fotoSlider, #testoSlider, #emoticonSlider{
+  #fotoSlider,
+  #testoSlider,
+  #emoticonSlider {
     display: none;
   }
 
-  .punteggio > p{
+  .punteggio > p {
     width: 100%;
-    margin-bottom: .6em;
+    margin-bottom: 0.6em;
   }
 
-  .mobileSlider{
+  .mobileSlider {
     color: white;
     display: block;
     float: left;
     width: 32.6%;
   }
 
-  .mobileTestoSlider{
+  .mobileTestoSlider {
     margin: 0 1%;
   }
 
-  .mobileTesto{
+  .mobileTesto {
     display: block;
     margin-bottom: 1em;
   }
 
-  .mobileSlider > select{
+  .mobileSlider > select {
     width: 100%;
     float: left;
     height: 2.5em;
@@ -85,11 +86,11 @@
     font-size: 1em;
   }
 
-  .select{
+  .select {
     color: #929292;
   }
 
-  .mobileSlider > select:after{
+  .mobileSlider > select:after {
     border-radius: 2em;
   }
 }

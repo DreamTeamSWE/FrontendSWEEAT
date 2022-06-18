@@ -1,25 +1,23 @@
-.preview-values{
+.preview-values {
   color: white;
-
 }
 
-.cucina{
+.cucina {
   width: 90%;
   margin-left: 5%;
 }
 
-.msl-wrp{
-  width: 100% !important;
-  background-color: white;
+.cucina > div > label {
+  line-height: 3em;
 }
 
-.zona{
+.zona {
   width: 90%;
   margin-left: 5%;
   color: white;
 }
 
-.zona > select{
+.zona > select {
   width: 100%;
   height: 3em;
   background-color: white;
@@ -29,16 +27,18 @@
   padding: 1%;
 }
 
-.zona > label, .cucina > div > label{
+.zona > label {
   line-height: 3em;
 }
 
-@media screen and (max-width: 911px) {
-
-  .cucina, .zona{
+@media screen and (max-width: 768px) {
+  .cucina {
     width: 48%;
     margin: 0 1% 1em;
     float: left;
   }
-
+  .zona {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

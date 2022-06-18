@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Filtri.css";
 
 function zonaHandler(e) {
@@ -14,7 +14,9 @@ const items = [
   { value: "TO", label: "Torino" },
 ];
 
-function Zona() {
+function Zona(props) {
+  console.log(props.list);
+  const [range, setRange] = useState(8);
   return (
     <div className="zona">
       <label>Zona</label>
@@ -26,6 +28,20 @@ function Zona() {
           </option>
         ))}
       </select>
+      <div className="radius">
+        <label>Radius</label>
+        <input
+          type="range"
+          min={1}
+          max={50}
+          step={.5}
+          value={range}
+          onChange={(event) => {
+            setRange(event.target.valueAsNumber);
+          }}
+        />
+        <label className="range">{range} Km</label>
+      </div>
     </div>
   );
 }

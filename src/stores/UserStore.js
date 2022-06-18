@@ -91,6 +91,7 @@ class UserStore {
           u.attributes.email,
           true
         );
+        this.fetchFavorites();
         //console.log(this.user.username);
       }
     } catch (error) {
@@ -115,6 +116,7 @@ class UserStore {
           user.attributes.email,
           true
         );
+        this.fetchFavorites();
         return true;
       }
     } catch (err) {
@@ -221,8 +223,8 @@ class UserStore {
   //methods for favoriteList
   //Add a new favorite
   async addFavorite(id_rist) {
-    console.log(this.user.username, "username");
-    console.log(id_rist, "addFavo");
+    //console.log(this.user.username, "username");
+    //console.log(id_rist, "addFavo");
     try {
       const s =
         config.apiFavoriteListUrls.insertFavUrl +

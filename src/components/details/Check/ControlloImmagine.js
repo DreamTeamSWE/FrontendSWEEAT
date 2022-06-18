@@ -10,7 +10,7 @@ export default function CheckImg(props) {
     });
     //const i = images[0];
     //console.log('images: ', images[0]);
-    return <img className="image" alt="immagine post" src={images[0]} />;
+    return <img className="image" alt="immagine post" src={images[0]} />
   }
 
   /*if(props.image !== " "){
@@ -20,6 +20,7 @@ export default function CheckImg(props) {
       })
     ))}
   }*/
-
-  return <p />;
+  else{
+    return <p />
+  }
 }

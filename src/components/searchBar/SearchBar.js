@@ -24,7 +24,6 @@ const Ricerca = () => {
           />
           <button type="submit" >Cerca</button>
         </div>
-        <div className="heroBg"></div>
       </div>
     </form >
   );

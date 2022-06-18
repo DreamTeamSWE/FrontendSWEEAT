@@ -13,6 +13,10 @@ export default function DettagliLocaleVM(store) {
   //When created, fetch
   useEffect(() => {
     rankingStore.fetchPosts(loc.state.id_rist);
+
+    return () => {
+      rankingStore.deletePosts();
+    };
   }, []);
 
   //Observer : if posts change, update

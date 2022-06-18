@@ -14,13 +14,14 @@ body {
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  margin-bottom: 2em;
 }
 
 .dettagliLocale {
   margin: 2rem auto;
   color: black;
   width: 90%;
-  padding: 1rem 3%;
+  padding: 1em 3%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -39,6 +40,19 @@ body {
   align-items: center;
 }
 
+.dettagliLocale > div:first-of-type {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.post_link {
+  width: 100%;
+  margin: 1em 0 2em;
+  text-align: center;
+}
+
 .dettagliLocale .post_link a {
   color: white;
   margin: 0 1rem;
@@ -55,10 +69,29 @@ body {
 
 .dettagliLocale .localePost {
   font-size: 3rem;
+  width: 70%;
+  margin-top: 0;
 }
 
-.dettagliLocale .telefonoPost {
-  font-size: 1.5rem;
+.telDettagli {
+  display: table;
+  width: 30%;
+  justify-content: center;
+  text-align: center;
+}
+
+.telDettagli > img {
+  width: 6%;
+  object-fit: contain;
+  float: left;
+  margin-top: 1.2em;
+  margin-left: 12%;
+}
+
+.telDettagli > p {
+  font-size: 1em;
+  width: 82%;
+  float: right;
 }
 
 .dettagliLocale .valutazionePost {
@@ -78,13 +111,13 @@ body {
 }
 
 .postcard {
-  width: 20rem;
+  width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #1d1f21;
   border-radius: 2rem;
-  height: 30rem;
+  height: 600px;
   overflow: hidden;
   color: white;
   border: 0.2rem solid var(--verdeChiaro);
@@ -92,12 +125,15 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .postcard .post {
   text-align: center;
 }
-
+.rsis-image {
+  border-radius: 2rem !important;
+}
 .postcard .image {
   width: 100%;
   height: 50%;
@@ -139,11 +175,33 @@ body {
   justify-content: center;
 }
 
+.ratingDetails {
+  text-align: center;
+  width: 15%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  margin-left: 5%;
+}
+
+.rank-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 0.3em;
+}
+
+.rank-label > img {
+  width: 12%;
+  object-fit: contain;
+}
+
 @media screen and (max-width: 768px) {
   .dettagliLocale .localePost {
     font-size: 2rem;
   }
-  .dettagliLocale .telefonoPost {
+  .telDettagli > p {
     font-size: 1.6rem;
   }
 }
@@ -152,7 +210,8 @@ body {
   .dettagliLocale .localePost {
     font-size: 1.6rem;
   }
-  .dettagliLocale .telefonoPost {
+
+  .telDettagli > p {
     font-size: 1.4rem;
   }
 }

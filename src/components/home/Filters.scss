@@ -1,0 +1,103 @@
+.filtri {
+  width: 768px;
+  margin: 0 auto;
+  background-color: #1d1f21;
+  border-radius: 2em;
+  height: min-content;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 7px 1px rgba(31, 31, 31, 0.2);
+  text-align: center;
+  h1 {
+    color: #01bf71;
+    width: 100%;
+    margin: 0;
+  }
+}
+.formFiltri {
+  width: 100%;
+  > label {
+    color: white;
+  }
+  .zona {
+    color: white;
+    select {
+      height: 2.5rem;
+      width: 60%;
+      border-radius: 2rem;
+      padding: 0 1rem;
+      margin-left: 1rem;
+    }
+    .radius {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      input {
+        width: calc(100% - 10rem);
+      }
+      label {
+        margin: auto;
+      }
+      label.range {
+        justify-content: center;
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .categories {
+    display: flex;
+    margin: 0.3rem 0;
+    color: white;
+    align-items: center;
+    justify-content: center;
+  }
+  .cucinaText {
+    width: 60%;
+    height: 2.5rem;
+    border-radius: 2em;
+    margin-left: 1rem;
+    color: black;
+    padding: 0 1rem;
+  }
+  > input {
+    &:first-of-type {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.salva {
+  width: 90%;
+  margin: 2em 5%;
+  line-height: 2.5em;
+  border-radius: 2em;
+  border-style: solid;
+  background-color: #01bf71;
+  border: none;
+  font-weight: bold;
+  color: white;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  .filtri {
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  .formFiltri {
+    > input {
+      &:hover {
+        text-decoration: none;
+        cursor: unset;
+      }
+    }
+  }
+}

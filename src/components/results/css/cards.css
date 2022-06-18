@@ -7,6 +7,7 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
 .loader {
   width: 100vw;
   height: 100vh;
@@ -35,9 +36,8 @@ body {
 }
 
 #results {
-  width: 74%;
-  margin-left: 1%;
-  float: left;
+  width: 94%;
+  margin-left: 3%;
   display: flex;
   flex-direction: column;
   display: -webkit-box;
@@ -372,7 +372,7 @@ body {
     width: 95%;
     margin: 1rem auto;
   }
-  .formFiltri > input:first-of-type {
+  /* .formFiltri > input:first-of-type {
     width: 42% !important;
     margin: 1em 0 1em 2% !important;
     padding: 0.5% 2.5% !important;
@@ -383,7 +383,7 @@ body {
     float: left;
     margin-left: 2% !important;
     display: block !important;
-  }
+  } */
   .rating > p {
     text-align: center;
   }

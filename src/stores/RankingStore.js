@@ -18,6 +18,7 @@ class RankingStore {
       fetchByName: action,
       filter: action,
       fetchPosts: action,
+      deletePosts: action,
     });
   }
 
@@ -26,6 +27,10 @@ class RankingStore {
       return this.places;
     }
     return null;
+  }
+
+  get numberPlaces() {
+    return this.places.length;
   }
 
   get filteredPlacesList() {
@@ -110,8 +115,69 @@ class RankingStore {
     //console.log(this.placesList);
   }
 
-  //Filter places already saved(not implemented)
-  async filter(campo1, campo2, campo3, campo4, campo5) {}
+  //Filter places
+  async filter(origin, size, radius, zone, category, m1, m2, m3) {
+    var url;
+    if (radius && zone && category) {
+      url =
+        config.apiFilters.getByFilters +
+        "?radius=" +
+        radius +
+        "&location=" +
+        zone +
+        "&categoria=" +
+        category +
+        "&position=" +
+        origin +
+        "&size=" +
+        size;
+    } else if (radius && zone) {
+      url =
+        config.apiFilters.getByFilters +
+        "?radius=" +
+        radius +
+        "&location=" +
+        zone +
+        "&position=" +
+        origin +
+        "&size=" +
+        size;
+    } else if (category) {
+      url =
+        config.apiFilters.getByFilters +
+        "?categoria=" +
+        category +
+        "&position=" +
+        origin +
+        "&size=" +
+        size;
+    }
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log(json);
+    runInAction(() => {
+      // console.log(json);
+      this.places.splice(0, this.places.length);
+      json.forEach((item) => {
+        this.places.push(
+          new Place(
+            item.id_ristorante,
+            item.nome_ristorante,
+            item.indirizzo,
+            item.telefono,
+            item.sito_web,
+            item.latitudine,
+            item.longitudine,
+            item.categoria,
+            item.punteggio_emoji,
+            item.punteggio_foto,
+            item.punteggio_testo,
+            item.url_image
+          )
+        );
+      });
+    });
+  }
 
   //This method fetch and save all the posts of a certain places (It uses the id of the place)
   async fetchPosts(id) {
@@ -152,6 +218,10 @@ class RankingStore {
     }
   }
 
+  async deletePosts() {
+    this.tempPosts.splice(0, this.tempPosts.length);
+  }
+
   getPlaceByIDFromLocal(id) {
     var i = 0;
     while (i < this.places.length && this.places[i].id !== id) {
@@ -159,6 +229,12 @@ class RankingStore {
     }
     if (this.places[i].id === id) {
       return this.places[i];
+    } else return null;
+  }
+
+  getPlacesInRange(from, to) {
+    if (this.places.length > 0) {
+      return this.places.slice(from, to);
     } else return null;
   }
 }

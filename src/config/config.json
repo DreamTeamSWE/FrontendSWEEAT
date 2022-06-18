@@ -1,0 +1,38 @@
+{
+  "api": {
+    "invokeUrl": ""
+  },
+  "cognito": {
+    "REGION": "eu-central-1",
+    "USER_POOL_ID": "eu-central-1_0bbAgNnSK",
+    "APP_CLIENT_ID": "4hcusfbf2nmqplkklbgpcg91pr"
+  },
+  "cognito2": {
+    "REGION": "eu-central-1",
+    "USER_POOL_ID": "eu-central-1_wD7CJ5Gro",
+    "APP_CLIENT_ID": "6m10corrv79dh2dsiieb9sfna6"
+  },
+  "apiFavoriteListUrls": {
+    "getFavUrl": "https://bvkr7jx827.execute-api.eu-central-1.amazonaws.com/dev/favorites?action=get&user=",
+    "removeFavUrl": "https://bvkr7jx827.execute-api.eu-central-1.amazonaws.com/dev/favorites?action=remove&user=",
+    "insertFavUrl": "https://bvkr7jx827.execute-api.eu-central-1.amazonaws.com/dev/favorites?action=add&user="
+  },
+  "apiRanking": {
+    "getRankUrl": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/getRanking",
+    "getPostsUrl": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/getLabelAndPost",
+    "getSearchUrl": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/searchByName"
+  },
+  "apiSuggest": {
+    "suggestUrl": "https://eultdbw3g5.execute-api.eu-central-1.amazonaws.com/dev/test_post"
+  },
+  "apiCities": {
+    "getCities": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/getCities"
+  },
+  "apiCategories": {
+    "getCategories": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/getLabelCategoria"
+  },
+  "apiFilters": {
+    "getByCategory": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/filterCategoria?categoria=Hotel&from=0&size=10",
+    "getByFilters": "https://cs0thtwbr7.execute-api.eu-central-1.amazonaws.com/dev/generalFilter"
+  }
+}

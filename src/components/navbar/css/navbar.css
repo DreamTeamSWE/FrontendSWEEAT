@@ -33,9 +33,9 @@ body {
   justify-content: space-between;
   height: 80px;
   z-index: 1;
-  width: 100%;
+  width: calc(100vw - 48px);
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 100vw;
 }
 
 .navLogo {
@@ -48,6 +48,7 @@ body {
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  background-color: #010606;
 }
 
 .navbarContainer > ul {
@@ -110,6 +111,8 @@ body {
 .openMenu,
 .chiudi {
   display: none;
+  background-color: #010606;
+  border: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -146,7 +149,7 @@ body {
   .fullSideNav {
     position: fixed;
     z-index: 99;
-    background-color: #1d1f21;
+    background-color: #010606;
     height: 100%;
     color: white;
     top: 0;

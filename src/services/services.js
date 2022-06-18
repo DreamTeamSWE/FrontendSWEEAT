@@ -13,15 +13,15 @@ export function configure() {
   });
 }
 
-//method to "suggest" an Instagram account (unused)
-export async function suggest() {
+//method to "suggest" an Instagram account
+export async function suggest(name) {
   console.log("suggerisciCall");
   const suggerisciInput = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ name: "minta_eats" }),
+    body: JSON.stringify({ name: name }),
   };
   const response = await fetch(config.apiSuggest.suggestUrl, suggerisciInput);
   const json = await response.json();
